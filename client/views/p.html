@@ -1,0 +1,92 @@
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+
+                <div class="row" ng-init="weShow=false;projectShow=false;eduShow=false;">
+              
+                <div class="col-sm-4 portfolio-item">
+                    <a ng-click="weShow=!weShow" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/client/assets/images/we.jpg" class="img-responsive" alt="work experience">
+                    </a>
+                </div>
+              
+
+                 <div class="col-sm-4 portfolio-item">
+                    <a ng-click="projectShow=!projectShow" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/client/assets/images/pm.jpg" class="img-responsive" alt="projects">
+                    </a>
+                </div>
+
+                   <div class="col-sm-4 portfolio-item">
+                    <a ng-click="eduShow=!eduShow" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/client/assets/images/edu.jpg" class="img-responsive" alt="education">
+                    </a>
+                </div>
+
+                </div>
+
+
+
+                    <div id="exp" ng-show="weShow">
+                    <web-dev></web-dev>
+                    <br>
+                    <hr>
+                    <br>
+                    <test-dev></test-dev>
+                    <br>
+                    <hr>
+                    <br>
+                    <and-dev></and-dev><br>
+                    <hr>
+                    <br>
+                    <java-dev></java-dev>
+                    </div>
+
+                    <div id="project" ng-show="projectShow">
+                    <project1></project1>
+                 
+                    </div> 
+
+                    <div id="project2" ng-show="projectShow">                    
+                    <acc-project></acc-project>
+                    </div> 
+
+                    <div id="education" ng-show="eduShow">
+                    <education></education>
+                    
+                    <br>
+                    <hr>  
+
+
+                    </div>          
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+

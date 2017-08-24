@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<script>
+
+function loadMore() {
+    var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+</script>
+
+    
+</head>
+<body>
+
+    <div class="row" ng-init="skillshow=true">
+     
+        <div class="w3-card-14" style="max-width:90%;padding-left:10%;">
+       <img class="img-responsive w3-circle wow slideInRight"  ng-click="skillshow=!skillshow" data-wow-duration="4s" data-wow-delay="1s" ng-src="/client/assets/images/skills.jpg" alt="profile pic">
+
+        <div class="w3-container wow flipInY" data-wow-delay="3s" data-wow-offset="7" ng-show="skillshow">
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="skill">
+  <h3 class="w3-center">MY Skills</h3>
+  <p class="w3-center"><em>Here are some skills that I have worked on.<br> </em></p><br>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal-content w3-card-4" style="display: none;" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://www.w3schools.com/angular/pic_angular.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Angular JS">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://node-os.com/assets/images/nodejs.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Node JS">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-512.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="firebase"" closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://www.shaneofalltrades.com/css/images/nightwatch-logo.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Nightwatch">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="http://www.ecsteam.com/wp-content/uploads/Java.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Java">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://frutbunn.com/wp-content/uploads/2015/06/js.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Html5 Css Javascript">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://icon-icons.com/icons2/478/PNG/512/Bitcoin_46999.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bitcoin">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://crackberry.com/sites/crackberry.com/files/styles/large/public/topic_images/2013/ANDROID.png?itok=xhm7jaxS" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Android">
+    </div>
+  
+    <div id="myDIV" style="display: none;">
+
+      <div class="w3-col m3">
+      <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Github">
+     </div>
+
+      <div class="w3-col m3">
+      <img src="https://www.archlinux.org/static/vector_tux.864e6cdcc23e.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Linux Shell">
+     </div>  
+     
+     <div class="w3-col m3">
+      <img src="http://mherman.org/images/mocha-chaijs.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mocha Chai automation testing">
+     </div> 
+
+      <div class="w3-col m3">
+      <img src="https://yt3.ggpht.com/-6FLljGveAfw/AAAAAAAAAAI/AAAAAAAAAAA/Of9vPj-uj7I/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="selenium Webdriver">
+     </div> 
+
+     <div class="w3-col m3">
+      <img src="http://www.theodo.fr/uploads/blog//2015/11/mongodb.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mongo Db">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://www.msfusa2000.com/elearning/images/php-mysql.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Php Mysql">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://o7planning.org/en/10129/cache/images/i/710264.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spring Mvc">
+     </div>
+
+     <div class="w3-col m3">
+      <img src="http://algoworks.com.s3-us-west-2.amazonaws.com/new-algoworks/wp-content/uploads/2016/03/02151003/Choosing-Automated-Testing-Frameworks.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Phantom Casper selenium">
+     </div>
+
+     <br>
+    </div>
+  <br>
+    <button class="w3-button w3-padding-large w3-light-grey" id="loadMore" onclick="loadMore()" style="margin-top:64px">LOAD MORE</button>
+
+  </div>
+</div>
+
+
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

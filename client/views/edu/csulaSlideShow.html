@@ -1,0 +1,28 @@
+
+
+<div class="w3-content w3-section" style="max-width:90%">
+  <img class="mySlides" src="/client/assets/csula/s1.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s2.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s3.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s4.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s5.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s6.jpg" style="width:100%">
+  <img class="mySlides" src="/client/assets/csula/s7.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>

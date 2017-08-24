@@ -1,0 +1,31 @@
+ <div class="row">
+
+
+            <div class="col-sm-4 portfolio-item wow slideInLeft">
+                    <a ng-click="apShow=!apShow" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/client/assets/images/aps.jpg" class="img-responsive" alt="Accademic projects">
+                    </a>
+                </div>
+
+           <div ng-show="apShow" class="col-sm-4 wow slideInLeft">
+               <ul>
+                   <li ng-init="bitFireShow"><a ng-click="bitFireShow=!bitFireShow" href="#"><h3>Bit Fire Website</h3></a></li>
+                   <li ng-init="leaseManShow"><a ng-click="leaseManShow=!leaseManShow" href="#"><h3>Lease Management System</h3></a></li>
+                    <li ng-init="etsShow"><a ng-click="etsShow=!etsShow" href="#"><h3>Employee tracker system  </h3></a></li>
+               </ul>
+           </div> 
+
+           <div ng-show="apShow">
+           <div ng-show="bitFireShow"><bit-fire></bit-fire></div>
+              <div ng-show="leaseManShow"><lease-man></lease-man></div>
+              <div ng-show="etsShow"><ets></ets></div>
+
+           </div>
+
+ </div>
+   

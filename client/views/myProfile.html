@@ -1,0 +1,28 @@
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="w3-row">
+                <div class="w3-col m5 l4">
+                    <img class="img-responsive w3-circle wow rollIn" data-wow-delay="3s" ng-src={{imagePath}} alt="profile pic">
+                   
+                </div>   
+           
+           
+               <div class="intro-text w3-col m7 l8">
+                        <h1 class="name wow zoomInUp" data-wow-delay="4s"> {{jobTitle}}</h1>
+                        <hr class="star-light">
+                        <span class="skills" id="skills" ng-class="skillAni">{{skill}}</span>
+                    </div>
+                </div>
+           
+           <div class="w3-col m5 l4">
+               <span class="skills">
+                   <only-skills></only-skills>
+               </span>
+                </div> 
+           
+           
+           
+            </div>
+      
+    </header>

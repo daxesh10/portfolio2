@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/">
+    <title>Dexter</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/client/css/theme/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="/client/css/theme/freelancer.min.css" rel="stylesheet">
+
+    <!--W3-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Custom Fonts -->
+    <link href="/client/css/theme/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+       
+    <!--animations-->
+        <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+           <script src="/client/js/wow.js"></script>
+           
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    
+    
+     <script src="/client/js/app.js"></script>
+    <script  src="/client/js/animate.js"></script>
+
+</head>
+
+<body ng-app="portfoliApp" ng-controller="myCtrl">
+
+    <nav class="navbar navbar-default navbar-custom">
+
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll" ng-init="menuShow=false">
+
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="menuShow=!menuShow" aria-haspopup="true" aria-expanded="false"> 
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-toggle" ng-show="menuShow">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">
+                        <a href="/portfolio"  onmouseover="this.style.color='#F96525'" class="wow bounce">Portfolio</a>
+                    </li>
+                    <li class="page-scroll" >
+                        <a href="/about" onmouseover="this.style.color='#F96525'" class="wow bounceInLeft" data-wow-delay="2s">About</a>
+                    </li>
+                    <li class="page-scroll" > 
+                        <a href="/contact" onmouseover="this.style.color='#F96525'"" class="wow bounceInLeft" data-wow-delay="2s">Contact</a>
+                    </li>
+                </ul>
+            </div>
+                
+                <a class="navbar-brand wow bounceInLeft" data-wow-delay="3s" href="/" ><em>{{name}}</em> </a>
+            </div>
+            
+             <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">
+                        <a href="/portfolio" class="wow bounce">Portfolio</a>
+                    </li>
+                    <li class="page-scroll" >
+                        <a href="/about" class="wow bounceInLeft" data-wow-delay="2s">About</a>
+                    </li>
+                    <li class="page-scroll" > 
+                        <a href="/contact" class="wow bounceInLeft" data-wow-delay="2s">Contact</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+
+        
+    </nav>
+
+           
+
+
+  
+  
+ <ng-view> </ng-view>
+
+</body>
+</html>

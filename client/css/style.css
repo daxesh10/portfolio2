@@ -1,0 +1,7 @@
+#content{
+
+     column-count: 2;
+     column-gap: 40px;
+     column-rule-style: solid;
+     column-rule-color: lightblue;
+}

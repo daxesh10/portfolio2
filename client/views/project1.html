@@ -1,0 +1,33 @@
+ <div class="row">
+
+
+            <div class="col-sm-4 portfolio-item wow slideInRight">
+                    <a ng-click="ppShow=!ppShow" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="/client/assets/images/pp.png" class="img-responsive" alt="personal projects">
+                    </a>
+                </div>
+
+           <div ng-show="ppShow" class="col-sm-4 wow slideInRight">
+               <ul>
+                   <li ng-init="blogShow"><a ng-click="blogShow=!blogShow" href="#"><h3>Blog Website</h3></a></li>
+                   <li ng-init="imgDownShow"><a ng-click="imgDownShow=!imgDownShow" href="#"><h3>Image downloader</h3></a></li>
+                   <li ng-init="jobScrapShow"><a ng-click="jobScrapShow=!jobScrapShow" href="#"><h3>Job Portal</h3></a></li>
+                     <li ng-init="botShow"><a ng-click="botShow=!botShow" href="#"><h3>Job BOT</h3></a></li>
+              
+               </ul>
+           </div>  
+
+           <div ng-show="ppShow">
+           <div ng-show="blogShow"><blog-website></blog-website></div>
+           <div ng-show="imgDownShow"><image-down></image-down></div>
+           <div ng-show="jobScrapShow"><job-scraper></job-scraper></div>
+           <div ng-show="botShow"><job-bot></job-bot></div>
+                                                  
+           </div>
+
+ </div>    

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    </head>
+<body>
+
+<div id="map" style="width:100%;height:200px;"></div>
+
+<script>
+function myMap() {
+    let myLatLng = new google.maps.LatLng(34.064645, -118.169612)
+   
+   
+   var map = new google.maps.Map(document.getElementById('map'), {
+        center: new google.maps.LatLng(34.064645, -118.169612),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+  })
+   
+       
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+   
+  });
+
+ marker.setMap(map);
+}
+
+
+
+// function loadMap()
+// {
+// var script = document.createElement('script');
+// var src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCsD5ofuSpq7xc7AOefulvpspMrx6zOt5g&callback=myMap";
+
+// s.setAttribute( 'src', src );
+// document.body.appendChild( s );
+// }
+</script>
+
+
+
+</body>
+</html>

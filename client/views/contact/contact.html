@@ -1,0 +1,45 @@
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Contact Details</h3>
+  <p class="w3-center"><em>Contact me for any JOB OPPORTUNITY OR FREELANCE PROJECTS!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    
+  
+    
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="/map"> Los Angeles, US</a><br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 619-606-7338<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: daxshmehra10@gmail.com<br>
+      </div>
+      <p><i class="fa fa-coffee"></i> leave me a note:</p>
+      <form target="_self">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" id="name" placeholder="Name" ng-model="msg.name" required name="name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" id="email" placeholder="Email" ng-model="msg.email" required name="email">
+          </div>
+        </div>
+
+        <textarea class="w3-input w3-border" type="text" id="msg" placeholder="Message" required ng-model="msg.content" name="message" rows="5" cols="64"></textarea>
+        <button class="w3-button w3-black w3-right w3-section" ng-click="mailme(msg)">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+
+      
+      
+      </form>
+    </div>
+    <p ng-bind="myRes"></p>
+  </div>
+</div>
